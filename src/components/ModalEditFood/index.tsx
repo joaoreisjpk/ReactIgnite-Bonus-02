@@ -7,7 +7,7 @@ import Input from '../Input';
 import { FormHandles } from '@unform/core';
 
 interface FoodProps {
-  available: boolean,
+  available?: boolean,
   id: string,
   name: string,
   description: string,
@@ -19,7 +19,7 @@ interface ModalEditFoodProps {
   setIsOpen: () => void;
   handleUpdateFood: (food: FoodProps) => void;
   isOpen: boolean;
-  editingFood: (prop: any) => any,
+  editingFood: FoodProps,
 }
 
 class ModalEditFood extends Component<ModalEditFoodProps, FormHandles> {
